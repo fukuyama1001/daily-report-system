@@ -42,6 +42,18 @@ public class ReportView {
      */
     private String content;
 
+
+    /**
+     * 日報の出勤時刻
+     */
+    private String shukkin;
+
+    /**
+     * 日報の退勤時刻
+     */
+    private String taikin
+    ;
+
     /**
      * 登録日時
      */

@@ -28,6 +28,16 @@
 <label for="${AttributeConst.REP_CONTENT.getValue()}">内容</label><br />
 <textarea name="${AttributeConst.REP_CONTENT.getValue()}" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
+
+<label for="${AttributeConst.REP_SHUKKIN.getValue()}">出勤時刻</label><br />
+<input type="text" name="${AttributeConst.REP_SHUKKIN.getValue()}" value="${report.shukkin}" />
+<br /><br />
+
+<label for="${AttributeConst.REP_TAIKIN.getValue()}">退勤時刻</label><br />
+<input type="text" name="${AttributeConst.REP_TAIKIN.getValue()}" value="${report.taikin}" />
+<br /><br />
+
+
 <input type="hidden" name="${AttributeConst.REP_ID.getValue()}" value="${report.id}" />
 <input type="hidden" name="${AttributeConst.TOKEN.getValue()}" value="${_token}" />
 <button type="submit">投稿</button>

@@ -23,8 +23,11 @@ public class ReportConverter {
                 rv.getReportDate(),
                 rv.getTitle(),
                 rv.getContent(),
+                rv.getShukkin(),
+                rv.getTaikin(),
                 rv.getCreatedAt(),
-                rv.getUpdatedAt());
+                rv.getUpdatedAt()
+                );
     }
 
     /**
@@ -44,6 +47,8 @@ public class ReportConverter {
                 r.getReportDate(),
                 r.getTitle(),
                 r.getContent(),
+                r.getShukkin(),
+                r.getTaikin(),
                 r.getCreatedAt(),
                 r.getUpdatedAt());
     }
@@ -74,6 +79,8 @@ public class ReportConverter {
         r.setReportDate(rv.getReportDate());
         r.setTitle(rv.getTitle());
         r.setContent(rv.getContent());
+        r.setShukkin(rv.getShukkin());
+        r.setTaikin(rv.getTaikin());
         r.setCreatedAt(rv.getCreatedAt());
         r.setUpdatedAt(rv.getUpdatedAt());
 

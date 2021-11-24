@@ -83,6 +83,19 @@ public class Report {
     private String content;
 
     /**
+     * 日報の出勤時刻
+     */
+    @Lob
+    @Column(name = JpaConst.REP_COL_SHUKKIN, nullable = false)
+    private String shukkin;
+
+    /**
+     * 日報の退勤時刻
+     */
+    @Lob
+    @Column(name = JpaConst.REP_COL_TAIKIN, nullable = false)
+    private String taikin;
+    /**
      * 登録日時
      */
     @Column(name = JpaConst.REP_COL_CREATED_AT, nullable = false)

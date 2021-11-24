@@ -31,8 +31,20 @@ public class ReportValidator {
             errors.add(contentError);
         }
 
-        return errors;
-    }
+
+        //出勤時刻のチェック
+        String shukkinError = validateShukkin(rv.getShukkin());
+        if (!shukkinError.equals("")) {
+            errors.add(shukkinError);
+        }
+        //退勤時刻のチェック
+        String taikinError = validateTaikin(rv.getTaikin());
+        if (!taikinError.equals("")) {
+            errors.add(taikinError);
+        }
+
+return errors;
+}
 
     /**
      * タイトルに入力値があるかをチェックし、入力値がなければエラーメッセージを返却
@@ -56,6 +68,32 @@ public class ReportValidator {
     private static String validateContent(String content) {
         if (content == null || content.equals("")) {
             return MessageConst.E_NOCONTENT.getMessage();
+        }
+
+        //入力値がある場合は空文字を返却
+        return "";
+    }
+    /**
+     * 出勤時刻に入力値があるかをチェックし、入力値がなければエラーメッセージを返却
+     * @param title タイトル
+     * @return エラーメッセージ
+     */
+    private static String validateShukkin(String shukkin) {
+        if (shukkin == null || shukkin.equals("")) {
+            return MessageConst.E_NOSHUKKIN.getMessage();
+        }
+
+        //入力値がある場合は空文字を返却
+        return "";
+    }
+    /**
+     * 退勤時刻に入力値があるかをチェックし、入力値がなければエラーメッセージを返却
+     * @param title タイトル
+     * @return エラーメッセージ
+     */
+    private static String validateTaikin(String taikin) {
+        if (taikin == null || taikin.equals("")) {
+            return MessageConst.E_NOTAIKIN.getMessage();
         }
 
         //入力値がある場合は空文字を返却
